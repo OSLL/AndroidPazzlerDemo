@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SpecialTestApplication</string>
     <string name="answer">ef8ba36de513a5720246f39998a899b5</string>
+    <string name="print_to_logcat">Print to Logcat</string>
 </resources>

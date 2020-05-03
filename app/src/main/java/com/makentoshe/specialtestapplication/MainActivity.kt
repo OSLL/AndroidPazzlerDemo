@@ -1,6 +1,7 @@
 package com.makentoshe.specialtestapplication
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.PrintStream
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         sample_text.text = sample_text.text.filterIndexed { index, _ -> index % result[0] == 0 }
+
+        hash_button.setOnClickListener {
+            Log.i("Hash", sample_text.text.toString())
+        }
     }
 
     private fun doSomething(block: String.() -> Unit) {
