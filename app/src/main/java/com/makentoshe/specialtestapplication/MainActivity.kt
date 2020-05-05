@@ -50,19 +50,12 @@ class MainActivity : AppCompatActivity() {
         block(String(stringFromJNI()))
     }
 
-    external fun stringFromJNI(): ByteArray
+    private fun stringFromJNI() = byteArrayOf()
 
     private fun getIndex(bool : Boolean) = when (bool) {
         bool == true -> 2
         bool == false -> 1
         else -> 0
-    }
-
-    companion object {
-        // Used to load the 'native-lib' library on application startup.
-        init {
-            System.loadLibrary("native-lib")
-        }
     }
 }
 
