@@ -36,11 +36,8 @@ class MainActivity : AppCompatActivity() {
             + anotherExtremelyLongStatementThatBarelyFitsOnALine
         }
 
-        sample_text.text = sample_text.text.filterIndexed { index, _ -> index % result[0] == 0 }
+        sample_text.text = sample_text.text.filterIndexed { index, _ -> index % result[0] == 0 }.subSequence(0,4)
 
-        hash_button.setOnClickListener {
-            Log.i("Hash", sample_text.text.toString())
-        }
     }
 
     private fun doSomething(block: String.() -> Unit) {
